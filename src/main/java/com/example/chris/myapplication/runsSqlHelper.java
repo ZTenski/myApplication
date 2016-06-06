@@ -1,4 +1,4 @@
-package layout;
+package com.example.chris.myapplication;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
