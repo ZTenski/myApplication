@@ -1,5 +1,6 @@
 package layout;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -64,15 +65,19 @@ public class main_hub extends Fragment implements View.OnClickListener {
     }
 
 
+
+
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
+    public void onAttach(Activity a)
+    {
+        super.onAttach(a);
+        if (a instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) a;
         } else {
-            throw new RuntimeException(context.toString()
+            throw new RuntimeException(a.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+
     }
 
     @Override
